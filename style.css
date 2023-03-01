@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  --primary-color: #444654;
+  --secondary-color: #202123;
+  --tertiary-color: #e7e1fa;
+
+  --primary-font-size: 0.9rem;
+  --secondary-font-size: 1.2rem;
+  --tertiary-font-size: 1.5rem;
+
+  font-family: "Roboto", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 1rem !important;
+  height: 1rem !important;
+  color: var(--tertiary-color);
+}
+
+main {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: var(--primary-color);
+}
+
+h1 {
+  font-size: var(--tertiary-font-size);
+  color: var(--tertiary-color);
+  font-weight: 300;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 40vw;
+  height: 90vh;
+  border: 1px solid var(--tertiary-color);
+  background-color: var(--secondary-color);
+}
+
+#appHeaders {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  height: 3rem;
+  background-color: var(--primary-color);
+}
+
+#appHeaders h1 {
+  text-align: center;
+  height: 100%;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+#appBody {
+  width: 100%;
+  height: 100%;
+  padding: 1rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(90vh - 3rem);
+}
+
+.chat {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  min-height: calc(90vh - 5rem);
+  max-height: calc(90vh - 5rem);
+  background-color: var(--primary-color);
+}
+
+.chatMessage {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  background-color: var(--primary-color);
+  overflow: auto;
+}
+
+.chatMessage h3 {
+  border-bottom: 1px solid var(--primary-color) !important;
+  width: 100% !important;
+}
+
+.chatMessage:first-child {
+  margin-top: 1rem;
+}
+
+.chatMessage p {
+  font-size: var(--primary-font-size);
+  margin: var(--primary-font-size) 0;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  min-height: 3.5rem !important;
+  background-color: var(--secondary-color);
+}
+
+.footer input {
+  width: 80%;
+  height: 100%;
+  color: var(--primary-color);
+  background-color: var(--tertiary-color);
+  border: none;
+  font-size: var(--secondary-font-size);
+}
+
+.footer button {
+  width: 20%;
+  height: 100%;
+  background-color: var(--tertiary-color);
+  border: none;
+  color: var(--primary-color);
+  font-size: var(--secondary-font-size);
+}
+
+.footer button:hover {
+  background-color: var(--primary-color);
+  color: var(--tertiary-color);
+  border: 1px solid var(--tertiary-color);
+}
+
+.chatMessageContent {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--tertiary-color);
+  max-width: 80%;
+  margin-left: 1rem;
+}
+
+.chatMessageDestinatario {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 100% !important;
+  margin-bottom: 1rem;
+}
+
+.chatMessageRemetente {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  min-width: 100% !important;
+  margin-bottom: 1rem;
+}
+
+.chatMessageRemetente .chatMessageContent {
+  background-color: var(--primary-color);
+  color: var(--tertiary-color);
+  border: 1px solid var(--tertiary-color);
+  margin-right: 1rem;
+}
+
+.chatMessageRemetente .chatMessageContent h3 {
+  border-bottom: 1px solid var(--tertiary-color) !important;
+  width: 100% !important;
+}
