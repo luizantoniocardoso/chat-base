@@ -49,7 +49,7 @@ async function botMessage(mensagem) {
 }
 
 async function postChatGpt3(prompt) {
-  const API_KEY = "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";
+  const API_KEY = "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";
   const API_URL =
     "https://api.openai.com/v1/engines/text-davinci-003/completions";
   const rest = await fetch(API_URL, {
