@@ -1,5 +1,4 @@
-import KEYS from "./KEYS";
-
+// ts-nocheck
 const remetente = `<div class="chatMessageRemetente">`;
 const destinatario = `<div class="chatMessageDestinatario">`;
 
@@ -51,7 +50,10 @@ async function botMessage(mensagem) {
 }
 
 async function postChatGpt3(prompt) {
-  const API_KEY = KEYS?.API_KEY;
+  try{
+     // para o chat funcionar coloque sua chave de API do OpenAI voce pode encontrar a sua no link a baixo
+  // https://platform.openai.com/account/api-keys
+  const API_KEY = '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'
   const API_URL =
     "https://api.openai.com/v1/engines/text-davinci-003/completions";
   const rest = await fetch(API_URL, {
@@ -69,4 +71,10 @@ async function postChatGpt3(prompt) {
   });
   const data = await rest.json();
   return await data.choices[0].text;
+  }
+  catch(err){
+    console.log(err)
+    return "Desculpe, houve um erro no servidor, tente novamente mais tarde, ou tente mudar sua Api Key no arquivo script.js"
+  }
+
 }
